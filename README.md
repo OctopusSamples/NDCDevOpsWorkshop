@@ -4,7 +4,7 @@
 
 The purpose of this repository and file is to take you through the "Turbocharging your Azure DevOps experience with Octopus Deploy" Workshop scheduled for 11th & 12th March in Oslo, Norway.
 
-This session will be led by a Continuous Delivery Archtect [Derek Campbell](https://twitter.com/DevOpsDerek) from [Octopus Deploy](https://octopus.com/), and Founder and Owner of Octopus Deploy [Paul Stovell](https://twitter.com/paulstovell). 
+This session will be led by a Continuous Delivery Archtect [Derek Campbell](https://twitter.com/DevOpsDerek) from [Octopus Deploy](https://octopus.com/), and Founder and Owner of Octopus Deploy [Paul Stovell](https://twitter.com/paulstovell).
 
 ## Agenda
 
@@ -25,8 +25,8 @@ The list of topics include:
 * Creating Azure Web Apps & VM's in Azure.
 * Adding Infrastructure in Octopus Deploy.
 * Creating the Deployment process in Octopus Deploy.
-* Packaging Applications.
 * Creating Build in Azure Pipelines & Test plans in Azure Test Plans.
+* Packaging Applications.
 * Administration of Azure DevOps & Octopus.
 * Multi-Tenancy, Channels, Lifecycles & Spaces.
 * Common Deployment patterns such as Canary, Blue/Green & Red/Black.
@@ -85,14 +85,73 @@ We will now sign up for an Azure DevOps account, Organization & Project
 
 ## OctoFX Background
 
+OctoFX is a sample application, built to demonstrate how a multi-tier application can be deployed using Octopus Deploy.
+
+The application consists of four major components:
+
+* Trading Website
+A customer-facing ASP.NET MVC website, where customers trade currencies. Customers can register, login, manage their beneficiary account details, get quotes, and book deals.
+* Dealer Portal
+An ASP.NET MVC website used by the dealers to adjust the rates offered to customers.
+* Deal Settlement Service
+A .NET Windows Service that simulates the bank reconcilation and deal settlement process. It checks whether the OctoFX clearing accounts have received funds for any pending deals, and then initiates the transfer when deals are ready to be settled.
+
+A SQL Server database underpins the system.
+
+### Pipeline
+
 ![CI/CD Pipeline](/Images/pipeline.png)
+
+### Development
+
 ![Development Infrastructure](/Images/dev.png)
+
+### Test
+
 ![Test Infrastructure](/Images/test.png)
+
+### Production
+
 ![Production Infrastructure](/Images/prod.png)
+
+## Wednesday 11th March Afternoon Session
 
 ## Azure Sign-up
 
-
-
 ## Deploying Azure Infrastructure
 
+## Adding Infrastructure to Octopus Deploy
+
+## Create Deployment Process in Octopus Deploy
+
+## Thursday 12th March Morning Session
+
+## Create Build & Release in Azure DevOps
+
+## Packaging Applications
+
+## Full Deployment
+
+## Thursday 12th March Afternoon Session
+
+## Channels
+
+## LifeCycles
+
+## Multi-Tenancy
+
+## Runbooks
+
+## Spaces
+
+## Common Deployment Patterns
+
+### Blue/Green
+
+### Red/Black
+
+### Canary Deployments
+
+## Octopus & Azure DevOps Administration
+
+## Wrap-up & Feedback
