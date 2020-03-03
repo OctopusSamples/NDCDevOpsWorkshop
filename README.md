@@ -57,7 +57,7 @@ Attendees will need a laptop with Windows with the following software:
 
 ## Octopus Cloud Sign-up
 
-The first thing we will do, is sign-up for the free Cloud Starter edition for each attendee.
+The first thing we will do, is sign-up for the free Cloud Starter edition for each attendee. You can get more details on [Octopus.com](https://octopus.com/docs/octopus-cloud)
 
 * Browse to <https://octopus.com/>
 * Click Get Started
@@ -148,40 +148,93 @@ For the development environment, we will be deploying
 
 ## Deploying Azure Infrastructure
 
+* Turn on auto-shutdown on Azure VM's to save cost
+
 ## Adding Infrastructure to Octopus Deploy
+
+This section of the Workshop, will be led by a presentation so please follow on-screen.
 
 ## Create Deployment Process in Octopus Deploy
 
+This section of the Workshop, will be led by a presentation so please follow on-screen.
+
 ## Thursday 12th March Morning Session
 
+* Turn on Infrastructure if you have shutdown enabled.
+
 ## Create Build & Release in Azure DevOps
+
+This section of the Workshop, will be led by a presentation
 
 ## Packaging Applications
 
 ## Full Deployment
 
+This section of the Workshop, will be led by a presentation so please follow on-screen.
+
 ## Thursday 12th March Afternoon Session
 
 ## Channels
 
-## LifeCycles
+You can read more [Channels](https://octopus.com/docs/deployment-process/channels)
+
+## Lifecycles
+
+You can read more [LifeCycles](https://octopus.com/docs/deployment-process/lifecycles)
 
 ## Multi-Tenancy
 
+You can read more [Multi-Tenancy](https://octopus.com/docs/deployment-patterns/multi-tenant-deployments)
+
 ## Runbooks
 
+You can read more about [Runbooks](https://octopus.com/docs/operations-runbooks)
+
 ## Spaces
+
+With Spaces you can partition your Octopus Deploy Server so that each of your teams can only access the projects, environments, and infrastructure they work with from the spaces they are members of. Users can be members of multiple teams and have access to multiple spaces, but the entities and infrastructure they work with will only be available in the space it is assigned to.
+
+You can read more [here](https://octopus.com/docs/administration/spaces)
 
 ## Common Deployment Patterns
 
 ### Blue/Green
 
+You can read more [here](https://octopus.com/docs/deployment-patterns/blue-green-deployments)
+
 ### Red/Black
+
+You can read more about Red vs Black [here](https://octopus.com/blog/blue-green-red-black)
 
 ### Canary Deployments
 
+You can read more about [Canary Deployments](https://octopus.com/docs/deployment-patterns/canary-deployments)
+
 ## Octopus & Azure DevOps Administration
+
+* [Auditing](https://octopus.com/docs/administration/managing-users-and-teams/auditing)
+* [External Authentication Providers](https://octopus.com/docs/administration/authentication)
+* [Users/Teams/Permissions](https://octopus.com/docs/administration/managing-users-and-teams)
+* [Upgrading Octopus](https://octopus.com/docs/administration/upgrading)
+* [Retention Policies](https://octopus.com/docs/administration/retention-policies)
+* [Cloud vs On-Premise](https://octopus.com/docs/octopus-cloud)
 
 ## Wrap-up & Feedback
 
-Destroy your Infrastructure
+Thanks for spending the last two days with us, we hope you enjoyed the workshop.
+
+We wanted to list a few items for you to consider carrying out at the end of the workshop, to help reduce any cost to you personally.
+
+* Destroy your Infrastructure, as this will continue charging you.
+* Keep Azure DevOps, as there should be no cost
+* Octopus Cloud will remain free for all of time as long as you have no more than 10 targets.
+* For more information on Octopus, check out the [Optimum Setup Guide](https://github.com/OctopusDeploy/OptimumSetupBook)
+* For more videos, check out our [YouTube Channel](http://octopus.com/videos)
+* Check out our [Events Page](https://octopus.com/events) for upcoming Webinars & Events, and for previously recorded Webinars
+* You can find more Octopus Samples on our Octopus Samples hosted Cloud Instance with Guest Authentication [here](http://samples.octopus.app/)
+* We have a [Jenkins Sample](https://jenkinssample.octopus.com/) that you can browse.
+* We have a [TeamCity Sample](https://teamcitysample.octopus.com/) that you can browse
+* You can see an existing build for OctoFX on our [Azure DevOps Sample](https://dev.azure.com/octopussamples/OctoFX)
+* Follow us on [Twitter](https://twitter.com/OctopusDeploy)
+
+Can you please take 5 minutes, and help us by filling out this anonymous [feedback form](https://forms.gle/tXi3Vn9n4kPKT5ai7).
