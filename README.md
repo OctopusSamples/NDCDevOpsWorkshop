@@ -6,6 +6,8 @@ The purpose of this repository and file is to take you through the "Turbochargin
 
 This session will be led by a Continuous Delivery Architect [Derek Campbell](https://twitter.com/DevOpsDerek) from [Octopus Deploy](https://octopus.com/), and Founder and Owner of Octopus Deploy [Paul Stovell](https://twitter.com/paulstovell).
 
+![toc]
+
 ## Agenda
 
 This workshop will cover core CI/CD concepts and best practices, and review real-world release management and automation problems and how to overcome them using Azure, Azure DevOps, and Octopus Deploy.
@@ -55,7 +57,17 @@ Attendees will need a laptop with Windows with the following software:
 
 ## Wednesday 11th March Morning Session
 
-## Octopus Cloud Sign-up
+Welcome to "Turbocharging your Azure DevOps experience with Octopus Deploy" where over the next 2 days, we will setup Azure DevOps, Azure Infrastructure and Octopus Cloud to deploy OctoFX.
+
+### What is Continuous Integration
+
+“Continuous integration (CI) is the practice of merging all developers' working copies to a shared mainline several times a day.”
+
+### What is Continuous Delivery
+
+“Continuous delivery is a software engineering approach in which teams produce software in short cycles, ensuring that the software can be reliably released and deployed at any time. It aims at building, testing, and releasing software with greater speed and frequency.”
+
+### Octopus Cloud Sign-up
 
 The first thing we will do, is sign-up for the free Cloud Starter edition for each attendee. You can get more details on [Octopus.com](https://octopus.com/docs/octopus-cloud)
 
@@ -66,7 +78,7 @@ The first thing we will do, is sign-up for the free Cloud Starter edition for ea
 * Wait for it to spin-up & sign in.
 * Take note of URL
 
-## Azure DevOps Sign-up
+### Azure DevOps Sign-up
 
 We will now sign up for an Azure DevOps account, Organization & Project
 
@@ -76,7 +88,7 @@ We will now sign up for an Azure DevOps account, Organization & Project
 * Create Organization, Select Organization Name & Select West Europe
 * Take noe of URL
 
-## Integrating Azure DevOps & Octopus Deploy
+### Integrating Azure DevOps & Octopus Deploy
 
 * Generate API Key (Class led Instructions provided)
 * Generate Azure Service Principal (Class led Instructions provided)
@@ -84,7 +96,7 @@ We will now sign up for an Azure DevOps account, Organization & Project
 * Install Octopus Deploys Azure DevOps extension in Azure DevOps (Class led Instructions provided)
 * Set up Service Connection to your Octopus Cloud Instance (Class led Instructions provided)
 
-## OctoFX Background
+### OctoFX Background
 
 OctoFX is a sample application, built to demonstrate how a multi-tier application can be deployed using Octopus Deploy.
 
@@ -144,73 +156,73 @@ For the development environment, we will be deploying
 
 ## Wednesday 11th March Afternoon Session
 
-## Azure Sign-up
+### Azure Sign-up
 
-## Deploying Azure Infrastructure
+### Deploying Azure Infrastructure
 
 * Turn on auto-shutdown on Azure VM's to save cost
 
-## Adding Infrastructure to Octopus Deploy
+### Adding Infrastructure to Octopus Deploy
 
 This section of the Workshop, will be led by a presentation so please follow on-screen.
 
-## Create Deployment Process in Octopus Deploy
+### Create Deployment Process in Octopus Deploy
 
 This section of the Workshop, will be led by a presentation so please follow on-screen.
 
-## Thursday 12th March Morning Session
+### Thursday 12th March Morning Session
 
 * Turn on Infrastructure if you have shutdown enabled.
 
-## Create Build & Release in Azure DevOps
+### Create Build & Release in Azure DevOps
 
 This section of the Workshop, will be led by a presentation
 
-## Packaging Applications
+### Packaging Applications
 
-## Full Deployment
+### Full Deployment
 
 This section of the Workshop, will be led by a presentation so please follow on-screen.
 
 ## Thursday 12th March Afternoon Session
 
-## Channels
+### Channels
 
 You can read more [Channels](https://octopus.com/docs/deployment-process/channels)
 
-## Lifecycles
+### Lifecycles
 
 You can read more [LifeCycles](https://octopus.com/docs/deployment-process/lifecycles)
 
-## Multi-Tenancy
+### Multi-Tenancy
 
 You can read more [Multi-Tenancy](https://octopus.com/docs/deployment-patterns/multi-tenant-deployments)
 
-## Runbooks
+### Runbooks
 
 You can read more about [Runbooks](https://octopus.com/docs/operations-runbooks)
 
-## Spaces
+### Spaces
 
 With Spaces you can partition your Octopus Deploy Server so that each of your teams can only access the projects, environments, and infrastructure they work with from the spaces they are members of. Users can be members of multiple teams and have access to multiple spaces, but the entities and infrastructure they work with will only be available in the space it is assigned to.
 
 You can read more [here](https://octopus.com/docs/administration/spaces)
 
-## Common Deployment Patterns
+### Common Deployment Patterns
 
-### Blue/Green
+#### Blue/Green
 
 You can read more [here](https://octopus.com/docs/deployment-patterns/blue-green-deployments)
 
-### Red/Black
+#### Red/Black
 
 You can read more about Red vs Black [here](https://octopus.com/blog/blue-green-red-black)
 
-### Canary Deployments
+#### Canary Deployments
 
 You can read more about [Canary Deployments](https://octopus.com/docs/deployment-patterns/canary-deployments)
 
-## Octopus & Azure DevOps Administration
+### Octopus & Azure DevOps Administration
 
 * [Auditing](https://octopus.com/docs/administration/managing-users-and-teams/auditing)
 * [External Authentication Providers](https://octopus.com/docs/administration/authentication)
@@ -219,7 +231,7 @@ You can read more about [Canary Deployments](https://octopus.com/docs/deployment
 * [Retention Policies](https://octopus.com/docs/administration/retention-policies)
 * [Cloud vs On-Premise](https://octopus.com/docs/octopus-cloud)
 
-## Wrap-up & Feedback
+## Wrap-up & Feedback, and Resources
 
 Thanks for spending the last two days with us, we hope you enjoyed the workshop.
 
@@ -229,6 +241,8 @@ We wanted to list a few items for you to consider carrying out at the end of the
 * Keep Azure DevOps, as there should be no cost
 * Octopus Cloud will remain free for all of time as long as you have no more than 10 targets.
 * For more information on Octopus, check out the [Optimum Setup Guide](https://github.com/OctopusDeploy/OptimumSetupBook)
+* Check out the [Octopus documentation](http://octopus.com/docs/)
+* Please check out [Octopus Guides](https://octopus.com/docs/guides) where you can select your own CI/CD pipeline and it will generate a video for you on how to set it up.
 * For more videos, check out our [YouTube Channel](http://octopus.com/videos)
 * Check out our [Events Page](https://octopus.com/events) for upcoming Webinars & Events, and for previously recorded Webinars
 * You can find more Octopus Samples on our Octopus Samples hosted Cloud Instance with Guest Authentication [here](http://samples.octopus.app/)
