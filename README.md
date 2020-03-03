@@ -10,7 +10,7 @@ This session will be led by a Continuous Delivery Archtect [Derek Campbell](http
 
 This workshop will cover core CI/CD concepts and best practices, and review real-world release management and automation problems and how to overcome them using Azure, Azure DevOps, and Octopus Deploy.
 
-## What you will learn
+### What you will learn
 
 We will start by taking an existing sample repository and get that building locally in Visual Studio. We will then take the application and get it building and testing on Azure DevOps, then configure the Release and lastly pass the artifact through to Octopus Deploy ready for deployment.
 
@@ -18,28 +18,35 @@ You will get hands-on access to provisioning infrastructure on Azure, building a
 
 The list of topics include:
 
-* Creating Octopus Cloud instance
-* Creating Azure DevOps Project
+* Creating Octopus Cloud instance.
+* Creating Azure DevOps Project.
+* Integrating Azure DevOps & Octopus Deploy.
+* Setup Azure Service Principal
+
 * Packaging Applications.
 * Creating Build in Azure Pipelines & Test plans in Azure Test Plans.
-* Integrating Azure DevOps & Octopus Deploy
-* Creating the Deployment process in Octopus Deploy.
-* Adding Infrastructure in Octopus Deploy
-* Creating Azure Web Apps & VM's in Azure
-* Administration of Azure DevOps & Octopus
-* Multi-Tenancy, Channels, Lifecycles & Spaces
-* Common Deployment patterns such as Canary, Blue/Green & Red/Black
 
-## Who should attend
+* Creating the Deployment process in Octopus Deploy.
+* Adding Infrastructure in Octopus Deploy.
+* Creating Azure Web Apps & VM's in Azure.
+* Administration of Azure DevOps & Octopus.
+* Multi-Tenancy, Channels, Lifecycles & Spaces.
+* Common Deployment patterns such as Canary, Blue/Green & Red/Black.
+
+### Who should attend
 
 This workshop is for Developers, Ops and DevOp Engineers starting on their CI/CD journey or for engineers looking for some fresh ideas. Additionally, if you are using an older version of Octopus and want a refresher, then come along.
 
-## Pre-Requisites
+## 11th March 2020 Morning - Configuration
 
-Free Azure/MSDN Subscription with access to create an Azure Service Principal. A Corporate Subscription is best to be avoided.
-Email address to spin up free Azure DevOps & Octopus instances
+The first thing we will do this morning is go through the pre-requisites and ensure you have these setup.
 
-## Computer Setup
+### Pre-Requisites
+
+* Free Azure/MSDN Subscription with access to create an Azure Service Principal. A Corporate Subscription is best to be avoided.
+* Email address to spin up free Azure DevOps & Octopus instances
+
+### Computer Setup
 
 Attendees will need a laptop with Windows with the following software:
 
@@ -47,3 +54,39 @@ Attendees will need a laptop with Windows with the following software:
 * MSBuild
 * NET Framework 4.6.1+
 * GIT
+
+## Wednesday 11th March Morning Session
+
+## Octopus Cloud Sign-up
+
+The first thing we will do, is sign-up for the free Cloud Starter edition for each attendee.
+
+* Browse to <https://octopus.com/>
+* Click Get Started
+* Register
+* Input URL, Select "West Europe" Region,Company, Name, Email & Password
+* Wait for it to spin-up & sign in.
+* Take note of URL
+
+## Azure DevOps Sign-up
+
+We will now sign up for an Azure DevOps account, Organization & Project
+
+* Browse to <http://dev.azure.com/>
+* Select Start Free
+* Sign-in with an account that has no Azure DevOps Organizations
+* Create Organization, Select Organization Name & Select West Europe
+
+## Integrating Azure DevOps & Octopus Deploy
+
+* Generate API Key (Class led Instructions provided)
+* Generate Azure Service Principal (Class led Instructions provided)
+* Note Down API Key & ASP Details
+* Install Octopus Deploys Azure DevOps extension in Azure DevOps (Class led Instructions provided)
+* Set up Service Connection to your Octopus Cloud Instance (Class led Instructions provided)
+
+## OctoFX Background
+
+![Development Infrastructure](Images\dev.png)
+![Test Infrastructure](Images\dev.png)
+![Production Infrastructure](Images\dev.png)
