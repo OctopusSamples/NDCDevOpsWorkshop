@@ -106,7 +106,7 @@ As a summary we will be deploying:
 
 * 4 x Azure Web Apps (1 for Development, 1 for Test and 2 for Production)
 * 1 x SQL Server for all environments
-* 1 x Jump Box
+* 1 x Jump Box for all environments
 * 1 x Windows Server for OctoFX Window Services for all environments
 
 ### Development
