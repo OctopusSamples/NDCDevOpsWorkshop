@@ -85,10 +85,10 @@ We will now sign up for an Azure DevOps account, Organization & Project
 
 ## OctoFX Background
 
-![CI/CD Pipeline](/Images/pipeline.png)
-![Development Infrastructure](/Images/dev.png)
-![Test Infrastructure](/Images/test.png)
-![Production Infrastructure](/Images/prod.png)
+![CI/CD Pipeline](NDCDevOpsWorkshop//Images/pipeline.png)
+![Development Infrastructure](NDCDevOpsWorkshop/Images/dev.png)
+![Test Infrastructure](NDCDevOpsWorkshop//Images/test.png)
+![Production Infrastructure](NDCDevOpsWorkshop//Images/prod.png)
 
 ## Azure Sign-up
 
