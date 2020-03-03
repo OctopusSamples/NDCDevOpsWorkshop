@@ -4,7 +4,7 @@
 
 The purpose of this repository and file is to take you through the "Turbocharging your Azure DevOps experience with Octopus Deploy" Workshop scheduled for 11th & 12th March in Oslo, Norway.
 
-This session will be led by a Continuous Delivery Archtect [Derek Campbell](https://twitter.com/DevOpsDerek) from [Octopus Deploy](https://octopus.com/), and Founder and Owner of Octopus Deploy [Paul Stovell](https://twitter.com/paulstovell).
+This session will be led by a Continuous Delivery Architect [Derek Campbell](https://twitter.com/DevOpsDerek) from [Octopus Deploy](https://octopus.com/), and Founder and Owner of Octopus Deploy [Paul Stovell](https://twitter.com/paulstovell).
 
 ## Agenda
 
@@ -74,6 +74,7 @@ We will now sign up for an Azure DevOps account, Organization & Project
 * Select Start Free
 * Sign-in with an account that has no Azure DevOps Organizations
 * Create Organization, Select Organization Name & Select West Europe
+* Take noe of URL
 
 ## Integrating Azure DevOps & Octopus Deploy
 
@@ -87,30 +88,57 @@ We will now sign up for an Azure DevOps account, Organization & Project
 
 OctoFX is a sample application, built to demonstrate how a multi-tier application can be deployed using Octopus Deploy.
 
-The application consists of four major components:
+The application consists of three major components:
 
-* Trading Website
-A customer-facing ASP.NET MVC website, where customers trade currencies. Customers can register, login, manage their beneficiary account details, get quotes, and book deals.
-* Dealer Portal
-An ASP.NET MVC website used by the dealers to adjust the rates offered to customers.
-* Deal Settlement Service
-A .NET Windows Service that simulates the bank reconcilation and deal settlement process. It checks whether the OctoFX clearing accounts have received funds for any pending deals, and then initiates the transfer when deals are ready to be settled.
-
-A SQL Server database underpins the system.
+* Trading Website - A customer-facing ASP.NET MVC website, where customers trade currencies. Customers can register, login, manage their beneficiary account details, get quotes, and book deals.
+* Deal Settlement Service - A .NET Windows Service that simulates the bank reconcilation and deal settlement process. It checks whether the OctoFX clearing accounts have received funds for any pending deals, and then initiates the transfer when deals are ready to be settled.
+* A SQL Server database underpins the system.
 
 ### Pipeline
 
+We will set up the following pipeline for OctoFX, using Octopus Deploy & Azure DevOps, deploying to Azure Infrastructure.
+
 ![CI/CD Pipeline](/Images/pipeline.png)
 
+### Infrastructure Overview
+
+As a summary we will be deploying:
+
+* 4 x Azure Web Apps (1 for Development, 1 for Test and 2 for Production)
+* 1 x SQL Server for all environments
+* 1 x Jump Box
+* 1 x Windows Server for OctoFX Window Services for all environments
+
 ### Development
+
+For the development environment, we will be deploying
+
+* 1 x Azure Web App for Development
+* 1 x SQL Database for Development
+* 1 x Windows Service for Development
+* 1 x Jump Box (For security & SQL Deployments)
 
 ![Development Infrastructure](/Images/dev.png)
 
 ### Test
 
+For the test environment, we will be deploying
+
+* 1 x Azure Web App for Test
+* 1 x SQL Database for Test
+* 1 x Windows Service for Test
+* 1 x Jump Box (For security & SQL Deployments)
+
 ![Test Infrastructure](/Images/test.png)
 
 ### Production
+
+For the development environment, we will be deploying
+
+* 2 x Azure Web Apps for Production
+* 1 x SQL Database for Production
+* 1 x Windows Service for Production
+* 1 x Jump Box (For security & SQL Deployments)
 
 ![Production Infrastructure](/Images/prod.png)
 
@@ -155,3 +183,5 @@ A SQL Server database underpins the system.
 ## Octopus & Azure DevOps Administration
 
 ## Wrap-up & Feedback
+
+Destroy your Infrastructure
