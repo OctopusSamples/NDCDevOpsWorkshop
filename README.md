@@ -87,6 +87,6 @@ We will now sign up for an Azure DevOps account, Organization & Project
 
 ## OctoFX Background
 
-![Development Infrastructure](Images\dev.png)
-![Test Infrastructure](Images\dev.png)
-![Production Infrastructure](Images\dev.png)
+![Development Infrastructure](\Images\dev.png)
+![Test Infrastructure](\Images\dev.png)
+![Production Infrastructure](\Images\dev.png)
