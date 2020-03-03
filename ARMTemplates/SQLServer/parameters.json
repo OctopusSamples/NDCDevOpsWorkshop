@@ -1,0 +1,177 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "XXXXXX"
+        },
+        "networkInterfaceName": {
+            "value": "XXXXXX"
+        },
+        "networkSecurityGroupName": {
+            "value": "XXXXXX"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "RDP",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "3389"
+                    }
+                }
+            ]
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "virtualNetworkId": {
+            "value": "XXXXXX"
+        },
+        "publicIpAddressName": {
+            "value": "XXXXXX"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+        "virtualMachineName": {
+            "value": "XXXXXX"
+        },
+        "virtualMachineRG": {
+            "value": "XXXXXX"
+        },
+        "osDiskType": {
+            "value": "Standard_LRS"
+        },
+        "dataDisks": {
+            "value": [
+                {
+                    "lun": 0,
+                    "createOption": "attach",
+                    "caching": "ReadOnly",
+                    "writeAcceleratorEnabled": false,
+                    "id": null,
+                    "name": "XXXXXX",
+                    "storageAccountType": null,
+                    "diskSizeGB": null,
+                    "diskEncryptionSet": {
+                        "id": null
+                    }
+                },
+                {
+                    "lun": 1,
+                    "createOption": "attach",
+                    "caching": "None",
+                    "writeAcceleratorEnabled": false,
+                    "id": null,
+                    "name": "XXXXXX",
+                    "storageAccountType": null,
+                    "diskSizeGB": null,
+                    "diskEncryptionSet": {
+                        "id": null
+                    }
+                }
+            ]
+        },
+        "dataDiskResources": {
+            "value": [
+                {
+                    "name": "XXXXXX",
+                    "sku": "Premium_LRS",
+                    "properties": {
+                        "diskSizeGB": 1024,
+                        "creationData": {
+                            "createOption": "empty"
+                        }
+                    }
+                },
+                {
+                    "name": "XXXXXX",
+                    "sku": "Premium_LRS",
+                    "properties": {
+                        "diskSizeGB": 1024,
+                        "creationData": {
+                            "createOption": "empty"
+                        }
+                    }
+                }
+            ]
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B2ms"
+        },
+        "adminUsername": {
+            "value": "XXXXXX"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "sqlVirtualMachineLocation": {
+            "value": "XXXXXX"
+        },
+        "sqlVirtualMachineName": {
+            "value": "XXXXXX"
+        },
+        "sqlConnectivityType": {
+            "value": "Private"
+        },
+        "sqlPortNumber": {
+            "value": 1433
+        },
+        "sqlStorageDisksCount": {
+            "value": 1
+        },
+        "sqlStorageWorkloadType": {
+            "value": "OLTP"
+        },
+        "sqlStorageDisksConfigurationType": {
+            "value": "NEW"
+        },
+        "sqlStorageStartingDeviceId": {
+            "value": 2
+        },
+        "sqlStorageDeploymentToken": {
+            "value": 69590
+        },
+        "sqlAutopatchingDayOfWeek": {
+            "value": "Sunday"
+        },
+        "sqlAutopatchingStartHour": {
+            "value": "2"
+        },
+        "sqlAutopatchingWindowDuration": {
+            "value": "60"
+        },
+        "dataPath": {
+            "value": "F:\\data"
+        },
+        "dataDisksLUNs": {
+            "value": [
+                0
+            ]
+        },
+        "logPath": {
+            "value": "G:\\log"
+        },
+        "logDisksLUNs": {
+            "value": [
+                1
+            ]
+        },
+        "tempDbPath": {
+            "value": "D:\\tempDb"
+        },
+        "rServicesEnabled": {
+            "value": "false"
+        }
+    }
+}
