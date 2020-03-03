@@ -22,13 +22,11 @@ The list of topics include:
 * Creating Azure DevOps Project.
 * Integrating Azure DevOps & Octopus Deploy.
 * Setup Azure Service Principal
-
+* Creating Azure Web Apps & VM's in Azure.
+* Adding Infrastructure in Octopus Deploy.
+* Creating the Deployment process in Octopus Deploy.
 * Packaging Applications.
 * Creating Build in Azure Pipelines & Test plans in Azure Test Plans.
-
-* Creating the Deployment process in Octopus Deploy.
-* Adding Infrastructure in Octopus Deploy.
-* Creating Azure Web Apps & VM's in Azure.
 * Administration of Azure DevOps & Octopus.
 * Multi-Tenancy, Channels, Lifecycles & Spaces.
 * Common Deployment patterns such as Canary, Blue/Green & Red/Black.
@@ -87,7 +85,14 @@ We will now sign up for an Azure DevOps account, Organization & Project
 
 ## OctoFX Background
 
-![CI/CD Pipeline](\Images\pipeline.png)
-![Development Infrastructure](\Images\dev.png)
-![Test Infrastructure](\Images\dev.png)
-![Production Infrastructure](\Images\dev.png)
+![CI/CD Pipeline](/Images/pipeline.png)
+![Development Infrastructure](/Images/dev.png)
+![Test Infrastructure](/Images/test.png)
+![Production Infrastructure](/Images/prod.png)
+
+## Azure Sign-up
+
+
+
+## Deploying Azure Infrastructure
+
