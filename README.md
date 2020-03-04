@@ -30,7 +30,7 @@ The list of topics include:
 * Creating Build in Azure Pipelines & Test plans in Azure Test Plans.
 * Packaging Applications.
 * Administration of Azure DevOps & Octopus.
-* Runbooks, Multi-Tenancy, Channels, Lifecycles & Spaces.
+* Runbooks, Multi-Tenancy, Workers, Channels, Lifecycles & Spaces.
 * Common Deployment patterns such as Canary, Blue/Green & Red/Black.
 
 ### Who should attend
@@ -302,6 +302,8 @@ This section, we will troubleshoot any issues you're seeing, but more often than
 
 ### Channels
 
+You can see a Webinar about Channels and Lifecycles on [YouTube](https://www.youtube.com/watch?v=y_cS_DL4CcY)
+
 As you deploy your projects, you can assign releases of projects to specific channels. This is useful when you want releases of a project to be treated differently depending on the criteria you've set. Without channels, you could find yourself duplicating projects to implement multiple release strategies. This would, of course, leave you trying to manage various duplicated projects. Channels let you use one project with multiple release strategies.
 
 Channels can be useful in the following scenarios:
@@ -322,6 +324,8 @@ You can also define versioning rules per channel to ensure that only versions th
 You can read more about [Channels](https://octopus.com/docs/deployment-process/channels)
 
 ### Lifecycles
+
+You can see a Webinar about Channels and Lifecycles on [YouTube](https://www.youtube.com/watch?v=y_cS_DL4CcY)
 
 Lifecycles give you control over the way releases of your software are promoted between your environments. Lifecycles enable several advanced deployment workflow features:
 
@@ -346,7 +350,9 @@ You can read more [LifeCycles](https://octopus.com/docs/deployment-process/lifec
 
 ### Multi-Tenancy
 
-This section describes how to use Octopus to manage deployments of your applications to multiple end-customers. You can see a Webinar on Multi-Tenanted deployments with Octopus Deploy on [Youtube](https://www.youtube.com/watch?v=qsHSosC3GmA)
+You can see a Webinar on Multi-Tenanted deployments with Octopus Deploy on [Youtube](https://www.youtube.com/watch?v=qsHSosC3GmA)
+
+This section describes how to use Octopus to manage deployments of your applications to multiple end-customers.
 
 Consider the following scenario:
 
@@ -382,13 +388,39 @@ You can read more [Multi-Tenancy](https://octopus.com/docs/deployment-patterns/m
 
 ### Runbooks
 
+You can see a full webinar on Runbooks on [YouTube](https://www.youtube.com/watch?v=aK1-pFe5dYM)
+
+A deployment is only one phase in the life of an application. There are typically many other tasks that are performed to keep an application operating. A large part of DevOps is running operations separate from deploying applications, and this is where runbooks helps.
+
+Runbooks are used to automate routine maintenance and emergency operations tasks like infrastructure provisioning, database management, and website failover and restoration.
+
 You can read more about [Runbooks](https://octopus.com/docs/operations-runbooks)
 
 ### Spaces
 
+You can see a a Webinar on Spaces on [YouTube](https://youtu.be/EJgM0r58VDc?t=278)
+
 With Spaces, you can partition your Octopus Deploy Server so that each of your teams can only access the projects, environments, and infrastructure they work with from the spaces they are members of. Users can be members of multiple teams and have access to various spaces, but the entities and infrastructure they work with will only be available in the space it is assigned to.
 
 You can read more [here](https://octopus.com/docs/administration/spaces)
+
+### Workers
+
+You can see a a Webinar on Workers on [YouTube](https://youtu.be/EJgM0r58VDc?t=1697)
+
+Workers are machines that can execute tasks that don't need to be run on the Octopus Server or individual deployment targets.
+
+You can manage your workers by navigating to Infrastructure ➜ Worker Pools in the Octopus Web Portal. Workers are useful for the following scenarios:
+
+* Publishing to Azure websites.
+* Deploying AWS CloudFormation templates.
+* Deploying to AWS Elastic Beanstalk.
+* Uploading files to Amazon S3.
+* Backing up databases.
+* Performing database schema migrations
+* Configuring load balancers.
+
+You can read more [here](https://octopus.com/docs/infrastructure/workers)
 
 ### Common Deployment Patterns
 
