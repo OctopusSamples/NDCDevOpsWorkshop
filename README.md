@@ -224,6 +224,8 @@ This section of the Workshop, will be led by a presentation so please follow on-
 * Create OctoFX Variables
 * Create OctoFX Deployment Process
 
+Your OctoFX Deployment process should look something like: 
+
 ![It should look something like](/Images/octopusoctofx.png)
 
 ### Thursday 12th March Morning Session
@@ -240,14 +242,27 @@ You should already have Azure DevOps, with an organization and the OctoFX Projec
 * Go to Azure Repos and import <https://github.com/OctopusSamples/OctoFX/> into Azure Repos.
 * Create Azure Pipeline for OctoFX.
 
+Your Azure Pipeline should look something like: 
+
 ![It should look something like](/Images/azurepipelinesoctofx.png)
 
 * Create Azure Release Pipeline
 
+Azure Release pipeline should look something like:
+
 ![Azure Release pipeline should look something like](/Images/azurereleasecreatereleasepipelinesoctofx.png)
+
+Azure Release Dev pipeline should look something like:
+
 ![Azure Dev Release pipeline should look something like](/Images/azurereleasedevpipelinesoctofx.png)
-![Azure Test Release pipeline should look something like](/Images/azurereleaseptestipelinesoctofx.png)
-![Azure Production Release pipeline should look something like](/Images/azurereleasepipeprodlinesoctofx.png)
+
+Azure Release Test pipeline should look something like:
+
+![Azure Test Release pipeline should look something like](/Images/azurereleasetestpipelinesoctofx.png)
+
+Azure Release Production pipeline should look something like:
+
+![Azure Production Release pipeline should look something like](/Images/azurereleaseprodpipelinesoctofx.png)
 
 ### Packaging Applications
 
