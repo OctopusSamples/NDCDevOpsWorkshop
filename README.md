@@ -37,7 +37,9 @@ The list of topics include:
 
 This workshop is for Developers, Ops and DevOp Engineers starting on their CI/CD journey or for engineers looking for some fresh ideas. Additionally, if you are using an older version of Octopus and want a refresher, then come along.
 
-## 11th March 2020 Morning - Configuration
+## Wednesday 11th March Morning Session
+
+Welcome to "Turbocharging your Azure DevOps experience with Octopus Deploy" where over the next 2 days, we will setup Azure DevOps, Azure Infrastructure and Octopus Cloud to deploy OctoFX.
 
 The first thing we will do this morning is go through the pre-requisites and ensure you have these setup.
 
@@ -55,17 +57,17 @@ Attendees will need a laptop with Windows with the following software:
 * NET Framework 4.6.1+
 * GIT
 
-## Wednesday 11th March Morning Session
-
-Welcome to "Turbocharging your Azure DevOps experience with Octopus Deploy" where over the next 2 days, we will setup Azure DevOps, Azure Infrastructure and Octopus Cloud to deploy OctoFX.
-
 ### What is Continuous Integration
 
-“Continuous integration (CI) is the practice of merging all developers' working copies to a shared mainline several times a day.”
+“[Continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) (CI) is the practice of merging all developers' working copies to a shared mainline several times a day.”
 
 ### What is Continuous Delivery
 
-“Continuous delivery is a software engineering approach in which teams produce software in short cycles, ensuring that the software can be reliably released and deployed at any time. It aims at building, testing, and releasing software with greater speed and frequency.”
+“[Continuous delivery](https://en.wikipedia.org/wiki/Continuous_delivery) is a software engineering approach in which teams produce software in short cycles, ensuring that the software can be reliably released and deployed at any time. It aims at building, testing, and releasing software with greater speed and frequency.”
+
+### What is Continuous Deployment
+
+"[Continuous deployment](https://en.wikipedia.org/wiki/Continuous_deployment) (CD) is a software engineering approach in which software functionalities are delivered frequently through automated deployments. CD contrasts with continuous delivery, a similar approach in which software functionalities are also frequently delivered and deemed to be potentially capable of being deployed but are actually not deployed.
 
 ### Octopus Cloud Sign-up
 
@@ -80,31 +82,35 @@ The first thing we will do, is sign-up for the free Cloud Starter edition for ea
 
 ### Azure DevOps Sign-up
 
-We will now sign up for an Azure DevOps account, Organization & Project
+We will now sign up for an Azure DevOps account, Organization & Project. You can get more details on [Microsoft Docs](https://docs.microsoft.com/en-us/azure/devops/user-guide/sign-up-invite-teammates?view=azure-devops)
 
 * Browse to <http://dev.azure.com/>
 * Select Start Free
 * Sign-in with an account that has no Azure DevOps Organizations (You will need to setup a Microsoft account for this)
 * Create Organization, Select Organization Name & Select West Europe
+* Create OctoFX Project and leave blank
 * Take note of URL
 
 ### Integrating Azure DevOps & Octopus Deploy
 
-* Generate API Key (Class led Instructions provided)
+* [Generate an Octopus API Key](https://octopus.com/docs/octopus-rest-api/how-to-create-an-api-key) (Class led Instructions provided)
 * [Generate Azure Service Principal](https://octopus.com/docs/infrastructure/deployment-targets/azure#create-service-principal-account-in-azure) (Class led Instructions provided)
-* Note Down API Key & ASP Details
+* Note Down API Key & Azure Service Principal Details
+* Set up Azure Service Principal in Octopus (Class led Instructions provided) (It will likely fail validation if created less than 15 minutes ago)
 * Install [Octopus Deploys Azure DevOps extension](https://octopus.com/downloads) in Azure DevOps (Class led Instructions provided)
 * Set up Service Connection to your Octopus Cloud Instance (Class led Instructions provided)
 
 ### OctoFX Background
 
-OctoFX is a sample application, built to demonstrate how a multi-tier application can be deployed using Octopus Deploy.
+[OctoFX](https://github.com/OctopusSamples/OctoFX) is a sample application, built to demonstrate how a multi-tier application can be deployed using Octopus Deploy.
 
 The application consists of three major components:
 
 * Trading Website - A customer-facing ASP.NET MVC website, where customers trade currencies. Customers can register, login, manage their beneficiary account details, get quotes, and book deals.
 * Deal Settlement Service - A .NET Windows Service that simulates the bank reconcilation and deal settlement process. It checks whether the OctoFX clearing accounts have received funds for any pending deals, and then initiates the transfer when deals are ready to be settled.
 * A SQL Server database underpins the system.
+
+## Wednesday 11th March Afternoon Session
 
 ### Pipeline
 
@@ -125,7 +131,7 @@ The SQL Server, Jump Box & Windows Services Server are all shared between enviro
 
 ### Development
 
-For the development environment, we will be deploying
+For the development environment, we will be deploying:
 
 * 1 x Azure Web App for Development
 * 1 x SQL Database for Development
@@ -136,7 +142,7 @@ For the development environment, we will be deploying
 
 ### Test
 
-For the test environment, we will be deploying
+For the test environment, we will be deploying:
 
 * 1 x Azure Web App for Test
 * 1 x SQL Database for Test
@@ -147,7 +153,7 @@ For the test environment, we will be deploying
 
 ### Production
 
-For the development environment, we will be deploying
+For the development environment, we will be deploying:
 
 * 2 x Azure Web Apps for Production
 * 1 x SQL Database for Production
@@ -156,19 +162,18 @@ For the development environment, we will be deploying
 
 ![Production Infrastructure](/Images/prod.png)
 
-## Wednesday 11th March Afternoon Session
-
 ### Azure Sign-up
 
-You will need an email address that is not tied to an existing Azure Subscription. If you need an email address to sign up, you can create one on gmail.com, outlook.com or if you ask the workshop host, they can provide you with one. 
+You will need an email address that is not tied to an existing Azure Subscription. If you need an email address to sign up, you can create one on gmail.com, outlook.com or if you ask the workshop host, they can provide you with one.
 
 * Browse to <https://azure.microsoft.com/en-gb/free/>
-* 
-
+* Go through Sign-up process
+* You should have access to 12 months of free services, £150 credit to use in 30 days, and access to 25+ free Services
+* Save details
 
 ### Deploying Azure Infrastructure (Class led Instructions provided)
 
-* Turn on auto-shutdown on Azure VM's to save cost (Class led Instructions provided)
+This section will be mostly carried out as Instructor led training.
 
 #### What are ARM Templates
 
@@ -190,17 +195,59 @@ In the template, you specify the resources to deploy and the properties for thos
 
 This section of the Workshop, will be led by a presentation so please follow on-screen.
 
+* Create 4 Web Apps using ARM Template. (1 x Development, 1 x Test & 2 x Production)
+* Create 1 Bastion box using Server ARM Template
+* Create 1 SQL Server using SQL ARM Template
+* Create 1 Windows Service Server with Server ARM Template
+
+### Infrastructure Tips & Instructions
+
+All of the below will be carried out by Class led Instructions.
+
+* Turn on auto-shutdown on Azure VM's to save cost
+* Get Web Apps IP addresses in Properties, and add this and IP from Windows Service Server to be allowed to connect to Port 1433 on the SQL Server.
+* Turn on Windows & SQL Authentication on SQL Server.
+* Allow RDP on SQL Server to just the Bastion Box, and connect in to SQL Server.
+* Install [Tentacles](https://octopus.com/downloads) on Bastion box and Windows Services Server and add to Octopus Cloud
+* Add Environments Development, Test & Production to Octopus Cloud.
+* Add Infrastructure to Octopus Cloud Instance
+* Tag Azure Web Apps with "OctoFX-Web
+* Tag Bastion Box with "OctoFX-Bastion"
+* Tag Windows Service Server with "OctoFX-RateSvc"
+
 ### Create Deployment Process in Octopus Deploy
 
 This section of the Workshop, will be led by a presentation so please follow on-screen.
 
+* Create Development, Test & Production Environments (if not already done)
+* Create OctoFX Project
+* Create OctoFX Variables
+* Create OctoFX Deployment Process
+
+![It should look something like](/Images/octopusoctofx.png)
+
 ### Thursday 12th March Morning Session
 
-* Turn on Infrastructure if you have shutdown enabled.
+* Turn on Infrastructure if you have shutdown enabled & Run Octopus Health check and confirm all are available.
 
 ### Create Build & Release in Azure DevOps
 
-This section of the Workshop, will be led by a presentation
+This section of the Workshop, will be led by a presentation.
+
+You should already have Azure DevOps, with an organization and the OctoFX Project from yesterday.
+
+* Browse to <https://dev.azure.com/> and login with details used yesterday.
+* Go to Azure Repos and import <https://github.com/OctopusSamples/OctoFX/> into Azure Repos.
+* Create Azure Pipeline for OctoFX.
+
+![It should look something like](/Images/azurepipelinesoctofx.png)
+
+* Create Azure Release Pipeline
+
+![Azure Release pipeline should look something like](/Images/azurereleasecreatereleasepipelinesoctofx.png)
+![Azure Dev Release pipeline should look something like](/Images/azurereleasedevpipelinesoctofx.png)
+![Azure Test Release pipeline should look something like](/Images/azurereleaseptestipelinesoctofx.png)
+![Azure Production Release pipeline should look something like](/Images/azurereleasepipeprodlinesoctofx.png)
 
 ### Packaging Applications
 
