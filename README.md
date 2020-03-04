@@ -4,17 +4,17 @@
 
 The purpose of this repository and file is to take you through the "Turbocharging your Azure DevOps experience with Octopus Deploy" Workshop scheduled for 11th & 12th March in Oslo, Norway.
 
-This session will be led by a Continuous Delivery Architect [Derek Campbell](https://twitter.com/DevOpsDerek) from [Octopus Deploy](https://octopus.com/), and Founder and Owner of Octopus Deploy [Paul Stovell](https://twitter.com/paulstovell).
+This Workshop will be led by Continuous Delivery Architect [Derek Campbell](https://twitter.com/DevOpsDerek) from [Octopus Deploy](https://octopus.com/), and Founder and Owner of Octopus Deploy [Paul Stovell](https://twitter.com/paulstovell).
 
 ![toc]
 
 ## Agenda
 
-This workshop will cover core CI/CD concepts and best practices, and review real-world release management and automation problems and how to overcome them using Azure, Azure DevOps, and Octopus Deploy.
+This Workshop will cover core CI/CD concepts and best practices, and review real-world release management and automation problems and how to overcome them using Azure, Azure DevOps, and Octopus Deploy.
 
 ### What you will learn
 
-We will start by taking an existing sample repository and get that building locally in Visual Studio. We will then take the application and get it building and testing on Azure DevOps, then configure the Release and lastly pass the artifact through to Octopus Deploy ready for deployment.
+We will start by taking an existing sample repository and get that building locally in Visual Studio. We will then take the application and get it building and testing on Azure DevOps, then configure the Release and lastly, pass the artifact through to Octopus Deploy ready for deployment.
 
 You will get hands-on access to provisioning infrastructure on Azure, building an Azure DevOps pipeline & creating an Octopus Cloud instance. You will use all of these tools to configure and prepare a build, test it, create the release and deployment pipeline of a sample application and get you deploying from Dev, through to test and lastly to Production.
 
@@ -23,7 +23,7 @@ The list of topics include:
 * Creating Octopus Cloud instance.
 * Creating Azure DevOps Project.
 * Integrating Azure DevOps & Octopus Deploy.
-* Setup Azure Service Principal
+* Set up Azure Service Principal
 * Creating Azure Web Apps & VM's in Azure.
 * Adding Infrastructure in Octopus Deploy.
 * Creating the Deployment process in Octopus Deploy.
@@ -35,13 +35,13 @@ The list of topics include:
 
 ### Who should attend
 
-This workshop is for Developers, Ops and DevOp Engineers starting on their CI/CD journey or for engineers looking for some fresh ideas. Additionally, if you are using an older version of Octopus and want a refresher, then come along.
+This Workshop is for Developers, Ops, and DevOp Engineers starting on their CI/CD journey or for engineers looking for some fresh ideas. Additionally, if you are using an older version of Octopus and want a refresher, then come along.
 
 ## Wednesday 11th March Morning Session
 
-Welcome to "Turbocharging your Azure DevOps experience with Octopus Deploy" where over the next 2 days, we will setup Azure DevOps, Azure Infrastructure and Octopus Cloud to deploy OctoFX.
+Welcome to "Turbocharging your Azure DevOps experience with Octopus Deploy," where over the next two days, we will setup Azure DevOps, Azure Infrastructure, and Octopus Cloud to deploy OctoFX.
 
-The first thing we will do this morning is go through the pre-requisites and ensure you have these setup.
+The first thing we will do this morning is to go through the pre-requisites and ensure you have these setup.
 
 ### Pre-Requisites
 
@@ -60,24 +60,24 @@ Attendees will need a laptop with Windows with the following software:
 
 ### What is Continuous Integration
 
-“[Continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) (CI) is the practice of merging all developers' working copies to a shared mainline several times a day.”
+"[Continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) (CI) is the practice of merging all developers' working copies to a shared mainline several times a day."
 
 ### What is Continuous Delivery
 
-“[Continuous delivery](https://en.wikipedia.org/wiki/Continuous_delivery) is a software engineering approach in which teams produce software in short cycles, ensuring that the software can be reliably released and deployed at any time. It aims at building, testing, and releasing software with greater speed and frequency.”
+"[Continuous delivery](https://en.wikipedia.org/wiki/Continuous_delivery) is a software engineering approach in which teams produce software in short cycles, ensuring that the software can be reliably released and deployed at any time. It aims at building, testing, and releasing software with greater speed and frequency."
 
 ### What is Continuous Deployment
 
-"[Continuous deployment](https://en.wikipedia.org/wiki/Continuous_deployment) (CD) is a software engineering approach in which software functionalities are delivered frequently through automated deployments. CD contrasts with continuous delivery, a similar approach in which software functionalities are also frequently delivered and deemed to be potentially capable of being deployed but are actually not deployed.
+"[Continuous deployment](https://en.wikipedia.org/wiki/Continuous_deployment) (CD) is a software engineering approach in which software functionalities are delivered frequently through automated deployments. CD contrasts with continuous delivery, a similar approach in which software functionalities are also regularly delivered and deemed to be capable of being deployed but are not deployed.
 
 ### Octopus Cloud Sign-up
 
-The first thing we will do, is sign-up for the free Cloud Starter edition for each attendee. You can get more details on [Octopus.com](https://octopus.com/docs/octopus-cloud)
+The first thing we will do is sign-up for the free Cloud Starter edition for each attendee. You can get more details on [Octopus.com](https://octopus.com/docs/octopus-cloud)
 
 * Browse to <https://octopus.com/>
 * Click Get Started
 * Register
-* Input URL, Select "West Europe" Region,Company, Name, Email & Password
+* Input URL, Select "West Europe" Region, Company, Name, Email & Password
 * Wait for it to spin-up & sign in.
 * Take note of URL
 
@@ -87,7 +87,7 @@ We will now sign up for an Azure DevOps account, Organization & Project. You can
 
 * Browse to <http://dev.azure.com/>
 * Select Start Free
-* Sign-in with an account that has no Azure DevOps Organizations (You will need to setup a Microsoft account for this)
+* Sign-in with an account that has no Azure DevOps Organizations (You will need to set up a Microsoft account for this)
 * Create Organization, Select Organization Name & Select West Europe
 * Create OctoFX Project and leave blank
 * Take note of URL
@@ -103,12 +103,12 @@ We will now sign up for an Azure DevOps account, Organization & Project. You can
 
 ### OctoFX Background
 
-[OctoFX](https://github.com/OctopusSamples/OctoFX) is a sample application, built to demonstrate how a multi-tier application can be deployed using Octopus Deploy.
+[OctoFX](https://github.com/OctopusSamples/OctoFX) is a sample application built to demonstrate how a multi-tier application is deployed using Octopus Deploy.
 
 The application consists of three major components:
 
 * Trading Website - A customer-facing ASP.NET MVC website, where customers trade currencies. Customers can register, login, manage their beneficiary account details, get quotes, and book deals.
-* Deal Settlement Service - A .NET Windows Service that simulates the bank reconcilation and deal settlement process. It checks whether the OctoFX clearing accounts have received funds for any pending deals, and then initiates the transfer when deals are ready to be settled.
+* Deal Settlement Service - A .NET Windows Service that simulates the bank reconciliation and deals settlement process. It checks whether the OctoFX clearing accounts have received funds for any pending deals, and then initiates the transfer when deals are ready to be settled.
 * A SQL Server database underpins the system.
 
 ## Wednesday 11th March Afternoon Session
@@ -121,7 +121,7 @@ We will set up the following pipeline for OctoFX, using Octopus Deploy & Azure D
 
 ### Infrastructure Overview
 
-As a summary we will be deploying:
+As a summary, we will be deploying:
 
 * 4 x Azure Web Apps (1 for Development, 1 for Test and 2 for Production)
 * 1 x SQL Server for all environments
@@ -165,7 +165,7 @@ For the development environment, we will be deploying:
 
 ### Azure Sign-up
 
-You will need an email address that is not tied to an existing Azure Subscription. If you need an email address to sign up, you can create one on gmail.com, outlook.com or if you ask the workshop host, they can provide you with one.
+You will need an email address that is not tied to an existing Azure Subscription. If you need an email address to sign up, you can create one on gmail.com, outlook.com, or if you ask the workshop host, they can provide you with one.
 
 * Browse to <https://azure.microsoft.com/en-gb/free/>
 * Go through Sign-up process
@@ -174,17 +174,17 @@ You will need an email address that is not tied to an existing Azure Subscriptio
 
 ### Deploying Azure Infrastructure (Class led Instructions provided)
 
-This section will be mostly carried out as Instructor led training.
+This section will be carried out as Instructor-led training.
 
 #### What are ARM Templates
 
 Azure Resource Manager(ARM) template is a JavaScript Object Notation (JSON) file that defines the infrastructure and configuration for your project.
 
-With the companies moving to the cloud, many teams have adopted agile development methods. These teams iterate quickly. They need to repeatedly deploy their solutions to the cloud, and know their infrastructure is in a reliable state. As infrastructure has become part of the iterative process, the division between operations and development has disappeared. Teams need to manage infrastructure and application code through a unified process.
+With the companies moving to the cloud, many teams have adopted agile development methods. These teams iterate quickly. They need to deploy their solutions to the cloud repeatedly and know their infrastructure is in a reliable state. As infrastructure has become part of the iterative process, the division between operations and Development has disappeared. Teams need to manage infrastructure and application code through a unified process.
 
 To meet these challenges, you can automate deployments and use the practice of infrastructure as code.
 
-In code, you define the infrastructure that needs to be deployed. The infrastructure code becomes part of your project. Just like application code, you store the infrastructure code in a source repository and version it. Any one on your team can run the code and deploy similar environments.
+In code, you define the infrastructure that needs to be deployed. The infrastructure code becomes part of your project. Just like the application code, you store the infrastructure code in a source repository and version it. Anyone on your team can run the code and deploy similar environments.
 
 To implement infrastructure as code for your Azure solutions, use Azure Resource Manager templates.
 
@@ -194,7 +194,7 @@ In the template, you specify the resources to deploy and the properties for thos
 
 ### Adding Infrastructure to Octopus Deploy
 
-This section of the Workshop, will be led by a presentation so please follow on-screen.
+This section of the Workshop, will be led by a presentation, so please follow on-screen.
 
 * Create 4 Web Apps using ARM Template. (1 x Development, 1 x Test & 2 x Production)
 * Create 1 Bastion box using Server ARM Template
@@ -206,9 +206,9 @@ This section of the Workshop, will be led by a presentation so please follow on-
 All of the below will be carried out by Class led Instructions.
 
 * Turn on auto-shutdown on Azure VM's to save cost
-* Get Web Apps IP addresses in Properties, and add this and IP from Windows Service Server to be allowed to connect to Port 1433 on the SQL Server.
+* Get Web Apps IP addresses in Properties, and add this and IP from Windows Service Server to be allowed to connect to port 1433 on the SQL Server.
 * Turn on Windows & SQL Authentication on SQL Server.
-* Allow RDP on SQL Server to just the Bastion Box, and connect in to SQL Server.
+* Allow RDP on SQL Server to just the Bastion Box, and connect into SQL Server.
 * Install [Tentacles](https://octopus.com/downloads) on Bastion box and Windows Services Server and add to Octopus Cloud
 * Add Environments Development, Test & Production to Octopus Cloud.
 * Add Infrastructure to Octopus Cloud Instance
@@ -218,7 +218,7 @@ All of the below will be carried out by Class led Instructions.
 
 ### Create Deployment Process in Octopus Deploy
 
-This section of the Workshop, will be led by a presentation so please follow on-screen.
+This section of the Workshop, will be led by a presentation, so please follow on-screen.
 
 * Create Development, Test & Production Environments (if not already done)
 * Create OctoFX Project
@@ -268,7 +268,7 @@ Azure Release Production pipeline should look something like:
 
 ### Packaging Applications
 
-There are a variety of tools you can use to package your applications, and as long as you can create supported packages you can deploy your applications with Octopus Deploy.
+There are a variety of tools you can use to package your applications, and as long as you can create supported packages, you can deploy your applications with Octopus Deploy.
 
 We've created the following tools to help you package your applications:
 
@@ -277,22 +277,22 @@ We've created the following tools to help you package your applications:
 * The [TeamCity](https://octopus.com/docs/packaging-applications/build-servers/teamcity) plugin.
 * The [Azure DevOps](https://octopus.com/docs/packaging-applications/build-servers/tfs-azure-devops/using-octopus-extension) plugin.
 
-In addition to these tools, you can use other tools to create your packages, for instance, you might use the following:
+In addition to these tools, you can use other tools to create your packages; for instance, you might use the following:
 
 * The built-in tools for [TeamCity](https://blog.jetbrains.com/teamcity/2010/02/artifact-packaging-with-teamcity/).
 * [NuGet.exe](https://docs.microsoft.com/en-us/nuget/tools/nuget-exe-cli-reference) to create NuGet packages.
 * [NuGet Package Explorer.](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)
 * [Grunt, gulp, or octojs](https://octopus.com/docs/deployment-examples/node-deployments/node-on-linux#create-and-push-node.js-project) for JavaScript apps.
 
-In OctoFX, we are using nuspec files, so our files will be generated for us, so you won't need to use the Package step from the Octopus Azure DevOps plugin and you can read more about OctoPack on <https://octopus.com/docs/packaging-applications/create-packages/octopack>
+In OctoFX, we are using nuspec files, so our files will be generated for us, so you won't need to use the Package step from the Octopus Azure DevOps plugin, and you can read more about OctoPack on <https://octopus.com/docs/packaging-applications/create-packages/octopack>
 
 ### Full Deployment
 
-This section of the Workshop, will be led by a presentation so please follow on-screen.
+This section of the Workshop, will be led by a presentation, so please follow on-screen.
 
 ### Troubleshoot Full Deployment
 
-This section, we will troubleshoot any issues you're seeing, but more often than not, it's the SQL user having issues.
+This section, we will troubleshoot any issues you're seeing, but more often than not, it's the SQL user having problems.
 
 * Check SQL Credentials
 * Check any Transformations
@@ -302,63 +302,63 @@ This section, we will troubleshoot any issues you're seeing, but more often than
 
 ### Channels
 
-As you deploy your projects, you can assign releases of projects to specific channels. This is useful when you want releases of a project to be treated differently depending on the criteria you've set. Without channels, you could find yourself duplicating projects in order to implement multiple release strategies. This would, of course, leave you trying to manage multiple duplicated projects. Channels lets you use one project, with multiple release strategies.
+As you deploy your projects, you can assign releases of projects to specific channels. This is useful when you want releases of a project to be treated differently depending on the criteria you've set. Without channels, you could find yourself duplicating projects to implement multiple release strategies. This would, of course, leave you trying to manage various duplicated projects. Channels let you use one project with multiple release strategies.
 
 Channels can be useful in the following scenarios:
 
-* Feature branches (or experimental branches) are deployed to test environments but not production.
+* Feature branches (or experimental branches) are deployed to test environments but not Production.
 * Early access versions of the software are released to members of your early access program.
-* Hot-fixes are deployed straight to production and then deployed through the rest of your infrastructure after the fix has been released.
+* Hot-fixes are deployed straight to Production and then deployed through the rest of your infrastructure after the fix has been released.
 
-When you are implementing a deployment process that uses channels you can scope the following to specific channels:
+When you are implementing a deployment process that uses channels, you can scope the following to specific channels:
 
 * Lifecycles
 * Steps
 * Variables
 * Tenants
 
-You can also define versioning rules per channel to ensure that only versions which meet specific criteria are deployed to specific channels.
+You can also define versioning rules per channel to ensure that only versions that meet specific criteria are deployed to particular channels.
 
 You can read more [Channels](https://octopus.com/docs/deployment-process/channels)
 
 ### Lifecycles
 
-Lifecycles give you control over the way releases of your software are promoted between your environments. Lifecycles enable a number of advanced deployment workflow features:
+Lifecycles give you control over the way releases of your software are promoted between your environments. Lifecycles enable several advanced deployment workflow features:
 
-* Control the order of promotion: for example, to prevent a release being deployed to production if it hasn't been deployed to staging.
+* Control the order of promotion: for example, to prevent a release being deployed to Production if it hasn't been deployed to staging.
 * Automate deployment to specific environments: for example, automatically deploy to test as soon as a release is created.
 * Retention policies: specify the number of releases to keep depending on how far they have progressed through the lifecycle.
 
-Lifecycles are defined by phases. A lifecycle can have one or many phases.
+Phases define lifecycles. A lifecycle can have one or many phases.
 
-* Phases occur in order. One phase must have a complete successful deployment before the next phase will be deployed to.
+* Phases occur in order. One phase must have a complete successful deployment before the next phase is deployed to.
 * Phases have one or more environments.
 * Environments in a phase can be defined as automatic deployment environments or manual deployment environments.
-* Phases can have a set number of environments that must be released to before the next phase is available for deployment.
+* Phases can have a set number of environments that must be released before the next phase is available for deployment.
 
 You can specify multiple Lifecycles to control which projects are deployed to which environments.
 
-Lifecycles are managed from the library page by navigating to Library ➜ Lifecyles:
+Lifecycles are managed from the library page by navigating to Library ➜ Lifecycles:
 
-Lifecycles are a key component of channels which give you even great control over how your software is deployed. Channels let you use multiple Lifecycles for a project and then automatically deploy to specific channels, using the defined lifecycle, based on the version of the software being deployed.
+Lifecycles are a crucial component of channels that give you even great control over how your software is deployed. Channels let you use multiple Lifecycles for a project and then automatically deploy to specific channels, using the defined lifecycle, based on the version of the software being deployed.
 
 You can read more [LifeCycles](https://octopus.com/docs/deployment-process/lifecycles)
 
 ### Multi-Tenancy
 
-This sections describes how to use Octopus to manage deployments of your applications to multiple end-customers.
+This section describes how to use Octopus to manage deployments of your applications to multiple end-customers.
 
 Consider the following scenario:
 
-NameBadge makes HR software for large corporate customers. They provide the software as a SaaS offering to their customers, and host the web site and associated services for them. Due to how the application is architected, for each customer, they deploy:
+NameBadge makes HR software for large corporate customers. They provide the software as a SaaS offering to their customers and host the web site and associated services for them. Due to how the application is architected, for each customer, they deploy:
 
 * A different SQL database
 * A copy of an ASP.NET website
 * A copy of a Windows Service
 
-The key issue in this scenario is that the same components need to be deployed multiple times, one for each end-customer.
+The critical issue in this scenario is that the same components need to be deployed multiple times, one for each end-customer.
 
-1. Deploy multiple instances of your project into the same [Environment](/docs/infrastructure/environments/index.md);
+1. Deploy multiple instances of your project into the same [Environment](/docs/infrastructure/environments/index.md);
 
 * Tenant-per-customer
 * Tenant-per-tester
@@ -376,7 +376,7 @@ The key issue in this scenario is that the same components need to be deployed m
 6. Employ tenant-aware security for managing tenants and deploying projects, including 3rd-party self-service sign in.
 7. Implement early access or pre-release test programs incorporating 1st-party or 3rd-party testers.
 8. Easily scale to large numbers of tenants using tags to manage tenants as groups instead of individuals.
-9. Easily implement simple multi-tenant deployment scenarios, and scale to support complex scenarios as your needs require.
+9. Easily implement simple multi-tenant deployment scenarios and scale to support complex scenarios as your needs require.
 
 You can read more [Multi-Tenancy](https://octopus.com/docs/deployment-patterns/multi-tenant-deployments)
 
@@ -386,7 +386,7 @@ You can read more about [Runbooks](https://octopus.com/docs/operations-runbooks)
 
 ### Spaces
 
-With Spaces you can partition your Octopus Deploy Server so that each of your teams can only access the projects, environments, and infrastructure they work with from the spaces they are members of. Users can be members of multiple teams and have access to multiple spaces, but the entities and infrastructure they work with will only be available in the space it is assigned to.
+With Spaces, you can partition your Octopus Deploy Server so that each of your teams can only access the projects, environments, and infrastructure they work with from the spaces they are members of. Users can be members of multiple teams and have access to various spaces, but the entities and infrastructure they work with will only be available in the space it is assigned to.
 
 You can read more [here](https://octopus.com/docs/administration/spaces)
 
@@ -396,7 +396,7 @@ You can read more [here](https://octopus.com/docs/administration/spaces)
 
 Blue-green deployments are a pattern whereby we reduce downtime during production deployments by having two production environments ("blue" and "green").
 
-> One of the challenges with automating deployment is the cut-over itself, taking software from the final stage of testing to live production. You usually need to do this quickly in order to minimize downtime. The **blue-green deployment** approach does this by ensuring you have two production environments, as identical as possible. At any time one of them, let's say blue for the example, is live. As you prepare a new release of your software you do your final stage of testing in the green environment. Once the software is working in the green environment, you switch the router so that all incoming requests go to the green environment - the blue one is now idle.
+> One of the challenges with automating deployment is the cut-over itself, taking software from the final stage of testing to live Production. You usually need to do this quickly to minimize downtime. The **blue-green deployment** approach does this by ensuring you have two production environments, as identical as possible. At any time one of them, let's say blue for the example, is live. As you prepare a new release of your software, you do your final stage of testing in the green environment. Once the software is working in the green environment, you switch the router so that all incoming requests go to the green environment - the blue one is now idle.
 >
 > * [Martin Fowler](http://martinfowler.com/bliki/BlueGreenDeployment.html)
 
@@ -404,13 +404,13 @@ As well as reducing downtime, Blue-Green can be a powerful way to use extra hard
 
 * Staging: when blue is active, green becomes the staging environment for the next deployment.
 * Rollback: we deploy to blue and make it active. Then a problem is discovered. Since green still runs the old code, we can roll back easily.
-* Disaster recovery: after deploying to blue and we're satisfied that it is stable, we can deploy the new release to green too. This gives us a standby environment ready in case of disaster.
+* Disaster recovery: after deploying to blue and we're satisfied that it is stable, we can deploy the new Release to green too. This gives us a standby environment ready in case of disaster.
 
 You can read more [here](https://octopus.com/docs/deployment-patterns/blue-green-deployments)
 
 #### Red/Black
 
-When deploying new versions of a centralized application like a web service, there is a strategy you can use to direct production traffic to the new version only after it has been successfully deployed and optionally tested. This strategy goes by the name blue/green or red/black, with each color representing a copy of the target environment. Traffic is routed to one color or the other (or potentially both in a canary deployment or during A/B testing, but that's a story for another time). Having two environments running side by side hosting different versions of an application means traffic can be switched over, and back again if an issue is found, with little to no downtime.
+When deploying new versions of a centralized application like a web service, there is a strategy you can use to direct production traffic to the latest version only after it has been successfully deployed and optionally tested. This strategy goes by the name blue/green or red/black, with each color representing a copy of the target environment. Traffic is routed to one color or the other (or potentially both in a canary deployment or during A/B testing, but that's a story for another time). Having two environments running side by side hosting different versions of an application means traffic can be switched over, and back again if an issue is found, with little to no downtime.
 
 So why is this strategy referred to as both green/blue and red/black? Do these colors imply technical differences?
 
@@ -428,23 +428,23 @@ The answer then goes on to say that:
 
 I've frequently seen the term red/black being attributed to tools created by Netflix and container platforms in general, so let's go to their documentation to see how they define these strategies.
 
-You can read more about Red vs Black [here](https://octopus.com/blog/blue-green-red-black)
+You can read more about Red vs. Black [here](https://octopus.com/blog/blue-green-red-black)
 
 #### Canary Deployments
 
-Canary deployments are a pattern for rolling out releases to a subset of users or servers. The idea is to first deploy the change to a small subset of servers, test it, and then roll the change out to the rest of the servers. The canary deployment serves as an early warning indicator with less impact on downtime: if the canary deployment fails, the rest of the servers aren't impacted.
+Canary deployments are a pattern for rolling out releases to a subset of users or servers. The idea is first to deploy the change to a small subset of servers, test it, and then roll the change out to the rest of the servers. The canary deployment serves as an early warning indicator with less impact on downtime: if the canary deployment fails, the rest of the servers aren't impacted.
 
-> Canaries were once regularly used in [coal mining](http://en.wikipedia.org/wiki/Coal_mining "Coal mining") as an early warning system. [Toxic](http://en.wikipedia.org/wiki/Toxic "Toxic") [gases](http://en.wikipedia.org/wiki/Gas "Gas") such as [carbon monoxide](http://en.wikipedia.org/wiki/Carbon_monoxide "Carbon monoxide"), [methane](http://en.wikipedia.org/wiki/Methane "Methane") or [carbon dioxide](http://en.wikipedia.org/wiki/Carbon_dioxide "Carbon dioxide") in the mine would kill the bird before affecting the miners. Signs of distress from the bird indicated to the miners that conditions were unsafe. The use of miners' canaries in [British](http://en.wikipedia.org/wiki/Great_Britain "Great Britain") mines was phased out in 1987.
+> Canaries were once regularly used in [coal mining](http://en.wikipedia.org/wiki/Coal_mining "Coal mining") as an early warning system. [Toxic](http://en.wikipedia.org/wiki/Toxic "Toxic") [gases](http://en.wikipedia.org/wiki/Gas "Gas") such as [carbon monoxide](http://en.wikipedia.org/wiki/Carbon_monoxide "Carbon monoxide"), [methane](http://en.wikipedia.org/wiki/Methane "Methane") or [carbon dioxide](http://en.wikipedia.org/wiki/Carbon_dioxide "Carbon dioxide") in the mine would kill the bird before affecting the miners. Signs of distress from the bird indicated to the miners that conditions were unsafe. The use of miners' canaries in [British](http://en.wikipedia.org/wiki/Great_Britain "Great Britain") mines was phased out in 1987.
 >
-> - [Wikipedia](http://en.wikipedia.org/wiki/Domestic_Canary#Miner.27s_canary)
+> * [Wikipedia](http://en.wikipedia.org/wiki/Domestic_Canary#Miner.27s_canary)
 
-The basic steps of a canary deployment are:
+The necessary steps of a canary deployment are:
 
 1. Deploy to one or more canary servers.
 2. Test, or wait until satisfied.
 3. Deploy to the remaining servers.
 
-The test phase of the canary deployment can work in many ways. You could run some automated tests, perform manual testing yourself, or even leave the server live and wait to see if problems are encountered by end users. In fact, all three of these approaches might be used. Depending on how you plan to test, you might decide to remove the canary server from the production load balancer and return it only when rolling out the change to the rest of the servers.
+The test phase of the canary deployment can work in many ways. You could run some automated tests, perform manual testing yourself, or even leave the server live and wait to see if end-users encounter problems. All three of these approaches might be used. Depending on how you plan to test, you might decide to remove the canary server from the production load balancer and return it only when rolling out the change to the rest of the servers.
 
 :::hint
 **Similar to staging**
@@ -464,13 +464,13 @@ You can read more about [Canary Deployments](https://octopus.com/docs/deployment
 
 ## Wrap-up & Feedback, and Resources
 
-Thanks for spending the last two days with us, we hope you enjoyed the workshop and learned a lot!
+Thanks for spending the last two days with us. We hope you enjoyed the Workshop and learned a lot!
 
 ### Recommendations
 
 * Destroy your Infrastructure, as this will continue charging you.
 * Keep Azure DevOps, as there should be no cost
-* Octopus Cloud will remain free for all of time as long as you have no more than 10 targets.
+* Octopus Cloud will remain free for all of the time as long as you have no more than ten targets.
 
 ### Octopus Resources
 
@@ -495,4 +495,4 @@ Thanks for spending the last two days with us, we hope you enjoyed the workshop 
 * [Azure DevOps Docs](https://docs.microsoft.com/en-gb/azure/devops/)
 * [Channel 9 video content](https://channel9.msdn.com/)
 
-Can you please take 5 minutes, and help us by filling out this anonymous [feedback form](https://forms.gle/tXi3Vn9n4kPKT5ai7).
+Can you please take 5 minutes and help us by filling out this anonymous [feedback form](https://forms.gle/tXi3Vn9n4kPKT5ai7).
