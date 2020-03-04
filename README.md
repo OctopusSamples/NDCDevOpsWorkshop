@@ -218,7 +218,7 @@ All of the below will be carried out by Class led Instructions.
 
 ### Create Deployment Process in Octopus Deploy
 
-This section of the Workshop, will be led by a presentation, so please follow on-screen. You can also see OctoFX being configured in Octopus Deploy on [YouTube](hhttps://www.youtube.com/watch?v=6DsJvtTcGMc)
+This section of the Workshop, will be led by a presentation, so please follow on-screen. You can also see OctoFX being configured in Octopus Deploy on [YouTube](https://www.youtube.com/watch?v=6DsJvtTcGMc)
 
 * Create Development, Test & Production Environments (if not already done)
 * Create OctoFX Project
