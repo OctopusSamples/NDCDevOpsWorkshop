@@ -30,7 +30,7 @@ The list of topics include:
 * Creating Build in Azure Pipelines & Test plans in Azure Test Plans.
 * Packaging Applications.
 * Administration of Azure DevOps & Octopus.
-* Multi-Tenancy, Channels, Lifecycles & Spaces.
+* Runbooks, Multi-Tenancy, Channels, Lifecycles & Spaces.
 * Common Deployment patterns such as Canary, Blue/Green & Red/Black.
 
 ### Who should attend
@@ -44,7 +44,7 @@ The first thing we will do this morning is go through the pre-requisites and ens
 ### Pre-Requisites
 
 * Free Azure/MSDN Subscription with access to create an Azure Service Principal. A Corporate Subscription is best to be avoided.
-* Email address to spin up free Azure DevOps & Octopus instances
+* Email address to spin up free Azure DevOps & Octopus instances. (We have some available if you have already used your email for Azure, and Azure DevOps, ask for access to email)
 
 ### Computer Setup
 
@@ -84,16 +84,16 @@ We will now sign up for an Azure DevOps account, Organization & Project
 
 * Browse to <http://dev.azure.com/>
 * Select Start Free
-* Sign-in with an account that has no Azure DevOps Organizations
+* Sign-in with an account that has no Azure DevOps Organizations (You will need to setup a Microsoft account for this)
 * Create Organization, Select Organization Name & Select West Europe
-* Take noe of URL
+* Take note of URL
 
 ### Integrating Azure DevOps & Octopus Deploy
 
 * Generate API Key (Class led Instructions provided)
-* Generate Azure Service Principal (Class led Instructions provided)
+* [Generate Azure Service Principal](https://octopus.com/docs/infrastructure/deployment-targets/azure#create-service-principal-account-in-azure) (Class led Instructions provided)
 * Note Down API Key & ASP Details
-* Install Octopus Deploys Azure DevOps extension in Azure DevOps (Class led Instructions provided)
+* Install [Octopus Deploys Azure DevOps extension](https://octopus.com/downloads) in Azure DevOps (Class led Instructions provided)
 * Set up Service Connection to your Octopus Cloud Instance (Class led Instructions provided)
 
 ### OctoFX Background
@@ -120,6 +120,8 @@ As a summary we will be deploying:
 * 1 x SQL Server for all environments
 * 1 x Jump Box for all environments
 * 1 x Windows Server for OctoFX Window Services for all environments
+
+The SQL Server, Jump Box & Windows Services Server are all shared between environments to keep the hosting costs low.
 
 ### Development
 
@@ -158,9 +160,31 @@ For the development environment, we will be deploying
 
 ### Azure Sign-up
 
-### Deploying Azure Infrastructure
+You will need an email address that is not tied to an existing Azure Subscription. If you need an email address to sign up, you can create one on gmail.com, outlook.com or if you ask the workshop host, they can provide you with one. 
 
-* Turn on auto-shutdown on Azure VM's to save cost
+* Browse to <https://azure.microsoft.com/en-gb/free/>
+* 
+
+
+### Deploying Azure Infrastructure (Class led Instructions provided)
+
+* Turn on auto-shutdown on Azure VM's to save cost (Class led Instructions provided)
+
+#### What are ARM Templates
+
+Azure Resource Manager(ARM) template is a JavaScript Object Notation (JSON) file that defines the infrastructure and configuration for your project.
+
+With the companies moving to the cloud, many teams have adopted agile development methods. These teams iterate quickly. They need to repeatedly deploy their solutions to the cloud, and know their infrastructure is in a reliable state. As infrastructure has become part of the iterative process, the division between operations and development has disappeared. Teams need to manage infrastructure and application code through a unified process.
+
+To meet these challenges, you can automate deployments and use the practice of infrastructure as code.
+
+In code, you define the infrastructure that needs to be deployed. The infrastructure code becomes part of your project. Just like application code, you store the infrastructure code in a source repository and version it. Any one on your team can run the code and deploy similar environments.
+
+To implement infrastructure as code for your Azure solutions, use Azure Resource Manager templates.
+
+The template is a JavaScript Object Notation (JSON) file that defines the infrastructure and configuration for your project. The template uses declarative syntax, which lets you state what you intend to deploy without having to write the sequence of programming commands to create it.
+
+In the template, you specify the resources to deploy and the properties for those resources.
 
 ### Adding Infrastructure to Octopus Deploy
 
@@ -233,22 +257,35 @@ You can read more about [Canary Deployments](https://octopus.com/docs/deployment
 
 ## Wrap-up & Feedback, and Resources
 
-Thanks for spending the last two days with us, we hope you enjoyed the workshop.
+Thanks for spending the last two days with us, we hope you enjoyed the workshop and learned a lot!
 
-We wanted to list a few items for you to consider carrying out at the end of the workshop, to help reduce any cost to you personally.
+### Recommendations
 
 * Destroy your Infrastructure, as this will continue charging you.
 * Keep Azure DevOps, as there should be no cost
 * Octopus Cloud will remain free for all of time as long as you have no more than 10 targets.
+
+### Octopus Resources
+
 * For more information on Octopus, check out the [Optimum Setup Guide](https://github.com/OctopusDeploy/OptimumSetupBook)
-* Check out the [Octopus documentation](http://octopus.com/docs/)
-* Please check out [Octopus Guides](https://octopus.com/docs/guides) where you can select your own CI/CD pipeline and it will generate a video for you on how to set it up.
-* For more videos, check out our [YouTube Channel](http://octopus.com/videos)
-* Check out our [Events Page](https://octopus.com/events) for upcoming Webinars & Events, and for previously recorded Webinars
-* You can find more Octopus Samples on our Octopus Samples hosted Cloud Instance with Guest Authentication [here](http://samples.octopus.app/)
-* We have a [Jenkins Sample](https://jenkinssample.octopus.com/) that you can browse.
-* We have a [TeamCity Sample](https://teamcitysample.octopus.com/) that you can browse
-* You can see an existing build for OctoFX on our [Azure DevOps Sample](https://dev.azure.com/octopussamples/OctoFX)
-* Follow us on [Twitter](https://twitter.com/OctopusDeploy)
+* [Octopus documentation](http://octopus.com/docs/)
+* [Octopus Guides](https://octopus.com/docs/guides) where you can select your own CI/CD pipeline and it will generate a video for you on how to set it up.
+* [Octopus YouTube Channel](http://octopus.com/videos)
+* [Octopus Events Page](https://octopus.com/events) for upcoming Webinars & Events, and for previously recorded Webinars
+* [Sample Octopus Instance](http://samples.octopus.app/)
+* [Octopus Jenkins Sample](https://jenkinssample.octopus.com/).
+* [Octopus TeamCity Sample](https://teamcitysample.octopus.com/)
+* [Azure DevOps OctoFX Sample](https://dev.azure.com/octopussamples/OctoFX)
+* [Octopus Twitter](https://twitter.com/OctopusDeploy)
+
+### Azure DevOps Resources
+
+* [Microsoft Learn](https://docs.microsoft.com/en-us/learn/) has some great resources for Azure DevOps & Azure
+* [Azure Quickstart Templates](https://azure.microsoft.com/en-gb/resources/templates/) and [Github](https://github.com/Azure/azure-quickstart-templates) are great resources for Quickstart ARM Templates
+* Azure DevOps certification [exam detail page](https://docs.microsoft.com/en-us/learn/certifications/azure-devops).
+* Azure Administrator exam details on this [page](https://docs.microsoft.com/en-gb/learn/certifications/azure-administrator)
+* [Azure Docs](https://docs.microsoft.com/en-gb/azure/)
+* [Azure DevOps Docs](https://docs.microsoft.com/en-gb/azure/devops/)
+* [Channel 9 video content](https://channel9.msdn.com/)
 
 Can you please take 5 minutes, and help us by filling out this anonymous [feedback form](https://forms.gle/tXi3Vn9n4kPKT5ai7).
