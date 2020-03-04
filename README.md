@@ -218,7 +218,7 @@ All of the below will be carried out by Class led Instructions.
 
 ### Create Deployment Process in Octopus Deploy
 
-This section of the Workshop, will be led by a presentation, so please follow on-screen.
+This section of the Workshop, will be led by a presentation, so please follow on-screen. You can also see OctoFX being configured in Octopus Deploy on [YouTube](hhttps://www.youtube.com/watch?v=6DsJvtTcGMc)
 
 * Create Development, Test & Production Environments (if not already done)
 * Create OctoFX Project
@@ -236,7 +236,7 @@ Your OctoFX Deployment process should look something like:
 
 ### Create Build & Release in Azure DevOps
 
-This section of the Workshop, will be led by a presentation.
+This section of the Workshop, will be led by a presentation. We have a recording available on [YouTube](https://www.youtube.com/watch?v=36DLmkQ6Gs4) which you can use to configure Azure DevOps.
 
 You should already have Azure DevOps, with an organization and the OctoFX Project from yesterday.
 
@@ -319,7 +319,7 @@ When you are implementing a deployment process that uses channels, you can scope
 
 You can also define versioning rules per channel to ensure that only versions that meet specific criteria are deployed to particular channels.
 
-You can read more [Channels](https://octopus.com/docs/deployment-process/channels)
+You can read more about [Channels](https://octopus.com/docs/deployment-process/channels)
 
 ### Lifecycles
 
@@ -346,7 +346,7 @@ You can read more [LifeCycles](https://octopus.com/docs/deployment-process/lifec
 
 ### Multi-Tenancy
 
-This section describes how to use Octopus to manage deployments of your applications to multiple end-customers.
+This section describes how to use Octopus to manage deployments of your applications to multiple end-customers. You can see a Webinar on Multi-Tenanted deployments with Octopus Deploy on [Youtube](https://www.youtube.com/watch?v=qsHSosC3GmA)
 
 Consider the following scenario:
 
