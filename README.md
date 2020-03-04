@@ -212,9 +212,9 @@ All of the below will be carried out by Class led Instructions.
 * Install [Tentacles](https://octopus.com/downloads) on Bastion box and Windows Services Server and add to Octopus Cloud
 * Add Environments Development, Test & Production to Octopus Cloud.
 * Add Infrastructure to Octopus Cloud Instance
-* Tag Azure Web Apps with "OctoFX-Web
-* Tag Bastion Box with "OctoFX-Bastion"
-* Tag Windows Service Server with "OctoFX-RateSvc"
+* Tag Azure Web Apps with 'OctoFX-Web'
+* Tag Bastion Box with 'OctoFX-Bastion'
+* Tag Windows Service Server with 'OctoFX-RateSvc'
 
 ### Create Deployment Process in Octopus Deploy
 
