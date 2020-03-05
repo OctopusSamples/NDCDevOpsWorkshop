@@ -6,8 +6,6 @@ The purpose of this repository and file is to take you through the "Turbo-chargi
 
 This workshop will be led by Continuous Delivery Architect [Derek Campbell](https://twitter.com/DevOpsDerek) from [Octopus Deploy](https://octopus.com/).
 
-![toc]
-
 ## Agenda
 
 This workshop covers core CI/CD concepts and best practices, reviews real-world release management and automation problems, and how to overcome them using Azure, Azure DevOps, and Octopus Deploy.
