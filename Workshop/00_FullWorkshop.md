@@ -93,7 +93,6 @@ We will now sign up for an Azure DevOps account, Organization & Project. You can
 ### Integrating Azure DevOps & Octopus Deploy
 
 * [Generate an Octopus API Key](https://octopus.com/docs/octopus-rest-api/how-to-create-an-api-key) (Class led instructions provided).
-* [Generate Azure Service Principal](https://octopus.com/docs/infrastructure/deployment-targets/azure#create-service-principal-account-in-azure) (Class led instructions provided).
 * Note the API Key & Azure Service Principal details.
 * Set up Azure Service Principal in Octopus (Class led instructions provided. It will likely fail validation if created less than 15 minutes ago - Try again at least 15 minutes after you created it).
 * Install [Octopus Deploy's Azure DevOps extension](https://octopus.com/downloads) in Azure DevOps (Class led instructions provided).
@@ -169,6 +168,7 @@ You will need an email address that is not tied to an existing Azure subscriptio
 * Go through the sign-up process.
 * You should have access to 12 months of free services, £150 credit to use in 30 days, and access to 25+ free Services.
 * Save the details.
+* [Generate Azure Service Principal](https://octopus.com/docs/infrastructure/deployment-targets/azure#create-service-principal-account-in-azure) (Class led instructions provided).
 
 ### Deploying Azure Infrastructure (Class led instructions provided)
 
